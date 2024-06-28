@@ -210,8 +210,7 @@ fn parse_pkl_obj_member(data: &[rmpv::Value]) -> Result<ObjectMember> {
 /// this function is used to parse dynmically typed listings
 
 /// i.e:
-///
-/// ```ignore
+/// ```pkl
 /// birds = new {
 ///  "Pigeon"
 ///  "Hawk"

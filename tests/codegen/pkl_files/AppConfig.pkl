@@ -1,0 +1,10 @@
+module AppConfig
+
+ip: String
+
+class Database {
+    username: String
+    password: String
+}
+
+database: Database

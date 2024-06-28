@@ -1,0 +1,7 @@
+module Primitives
+
+integer: Int = 3
+float: Float = 3.01
+string: String = "3 string"
+bool: Boolean = true
+`null`: Null = null

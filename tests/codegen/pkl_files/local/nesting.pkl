@@ -1,0 +1,25 @@
+stockPigeon {
+  name = "Stock pigeon"
+  diet = "Seeds"
+  taxonomy {
+    kingdom = "Animalia"
+    clade = "Columbimorphae"
+    order = "Columbiformes"
+    species = "Columba oenas"
+  }
+}
+
+woodPigeon = (stockPigeon) {
+  name = "Common wood pigeon"
+  taxonomy {
+    species = "Columba palumbus"
+  }
+}
+
+dodo = (woodPigeon) {
+  name = "Dodo"
+  extinct = true
+  taxonomy {
+    species = "Raphus cucullatus"
+  }
+}

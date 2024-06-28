@@ -29,8 +29,7 @@ use tracing_subscriber::FmtSubscriber;
 /// }
 /// ```
 /// -------------
-/// ```no_run
-///
+/// ```rust ignore
 /// use serde::Deserialize;
 ///
 /// #[derive(Deserialize)]
@@ -45,8 +44,9 @@ use tracing_subscriber::FmtSubscriber;
 ///     password: String,
 /// }
 ///
+/// # Usage inside function
 /// # fn main() -> Result<(), rpkl::Error> {
-/// let config: Database = rpkl::from_config("config.pkl")?;
+/// #    let config: Database = rpkl::from_config("config.pkl")?;
 /// #    Ok(())
 /// # }
 /// ```
