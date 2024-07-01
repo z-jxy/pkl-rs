@@ -20,6 +20,33 @@ mod codegen {
     use crate::Result;
 
     impl PklMod {
+        /// Entry point for code generation.
+        ///
+        /// When used, will produce a file in the `./generated` directory
+        /// containing structs equivalent to the config specified by the
+        /// PklMod provided.
+        ///
+        /// TODO Should this produce code directly to the ./src/generated/ folder?
+        ///
+        /// This code should be embedded in your build system to regenerate
+        /// the module when changes are made to the Pkl configuration.
+        ///
+        /// We provide an example of how to do this in the
+        /// [repository](https://github.com/z-jxy/rpkl/tree/main/examples/codegen.rs).
+        ///
+        /// TODO Example for cargo-make
+        ///
+        /// # Usage
+        /// ```rust no_run
+        /// use std::path::PathBuf;
+        ///
+        /// fn main() {
+        ///     let mut evaluator = pkl_rs::api::evaluator::Evaluator::new().unwrap();
+        ///     let pkl_mod = evaluator.evaluate_module(PathBuf::from("path/to/your/file.pkl")).unwrap();
+        ///     pkl_mod.codegen().unwrap()
+        /// }
+        /// ```
+        ///
         pub fn codegen(&self) -> Result<()> {
             let path = PathBuf::from("./generated");
             std::fs::create_dir_all(&path)?;

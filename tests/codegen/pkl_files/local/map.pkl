@@ -1,0 +1,10 @@
+birds = new Mapping {
+  ["Pigeon"] {
+    lifespan = 8
+    diet = "Seeds"
+  }
+  ["Parrot"] {
+    lifespan = 20
+    diet = "Berries"
+  }
+}
